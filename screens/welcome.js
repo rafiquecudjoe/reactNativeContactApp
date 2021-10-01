@@ -1,18 +1,15 @@
 import { NavigationContainer } from "@react-navigation/native";
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
-import { TouchableOpacity } from "react-native-gesture-handler";
+import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 
-function Welcome({navigation}) {
+function Welcome({ navigation }) {
   return (
     <View style={styles.main}>
       <Text style={styles.logo}>THE TECH GUY</Text>
-          <Text style={styles.appname}>CONTACTS APP</Text>
-          <TouchableOpacity onPress={()=>navigation.navigate("welcome2")}>
-          <Text style={styles.gets}>GET STARTED</Text>
-
-          </TouchableOpacity>
-     
+      <Text style={styles.appname}>CONTACTS APP</Text>
+      <TouchableOpacity onPress={() => navigation.navigate("welcome2")}>
+        <Text style={styles.gets}>GET STARTED</Text>
+      </TouchableOpacity>
     </View>
   );
 }

@@ -1,6 +1,6 @@
 import React from "react";
-import { View, Text, StyleSheet, Image } from "react-native";
-import { TextInput, TouchableOpacity } from "react-native-gesture-handler";
+import { View, Text, StyleSheet, Image, TextInput, TouchableOpacity  } from "react-native";
+
 import pic1 from "../assets/home2.jpg";
 
 function Welcome({ navigation }) {

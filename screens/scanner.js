@@ -1,38 +1,23 @@
 import React from "react";
 import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
-import pic from "../assets/qr1.jpg";
-import pic1 from "../assets/profile2.jpg";
+import QRscanner from "../QRscanner";
 
-
-function Home({ navigation }) {
+function Scanner({ navigation }) {
   return (
-    <View style={styles.mainhome}>
-      <Text style={{ fontSize: 20, marginBottom: 20 }}>
-        Exchange Contact Information
-      </Text>
-      <Text style={{ fontSize: 15, marginBottom: 20, color: "grey" }}>
-        Scan the QR below to share your contacts
-      </Text>
-
+      <View style={Styles.mainhome}>
+          
+      <View style={{backgroundColor:'yellow'}}>
+      <QRscanner/>
+      </View>
+         
       <View>
-        <Image style={styles.homeimg} source={pic} />
-      </View>
-      <View style={{ flexDirection: "row" }}>
-        <Image style={styles.homep} source={pic1} />
-        <View style={{ marginHorizontal: 20 }}>
-          <Text style={{ fontSize: 20 }}>Rafique Adam Cudjoe</Text>
-          <Text style={{ color: "grey" }}>Software Developer</Text>
-        </View>
-      </View>
-      <View
-        style={{ marginTop: 70, borderTopWidth: 0.7, borderTopColor: "grey" }}
-      >
+        
+     </View>
         <View
-          style={{ paddingTop: 20, flexDirection: "row", marginBottom: 30 }}
+          style={{ paddingTop: 20, flexDirection: "row", marginBottom: 30,backgroundColor:'red' }}
         >
           <Text style={{ marginLeft: 20 }}>Want to add a connection?</Text>
           <TouchableOpacity
-            onPress={() => navigation.navigate("scanner")}
             style={{
               marginLeft: 30,
               borderWidth: 1,
@@ -54,7 +39,7 @@ function Home({ navigation }) {
           </TouchableOpacity>
         </View>
       </View>
-    </View>
+    
   );
 }
 
@@ -79,4 +64,13 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Home;
+const Styles = StyleSheet.create({
+ 
+  mainhome: {
+    paddingTop:100,
+    flex: 1,
+    backgroundColor:'green'
+  }
+})
+
+export default Scanner;

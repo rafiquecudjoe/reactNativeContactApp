@@ -10,6 +10,8 @@ import Home from "../screens/home";
 import ScanQR from "../screens/scanQr";
 import { Text } from "react-native";
 import { Ionicons } from '@expo/vector-icons';
+import Scanner from "../screens/scanner";
+import QRscanner from "../QRscanner";
 
 const Stack = createStackNavigator();
 function AppContainer({ navigation }) {
@@ -54,7 +56,9 @@ function AppContainer({ navigation }) {
           headerRight: () => <Ionicons style={{marginRight:30}}name="person-outline" size={24} color="white"/>,
             headerTitleStyle: { fontSize: 20, color:'white',marginBottom:10},
         headerStyle:{backgroundColor:'#FF2442',}
-        }}/>
+          }} />
+        <Stack.Screen name="scanner" component={QRscanner}
+        options={{ headerShown: false }}/>
         <Stack.Screen name="profile" component={Profile}
         />
         <Stack.Screen name="scanqr" component={ScanQR} />

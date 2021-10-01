@@ -1,7 +1,7 @@
-import { NavigationContainer } from "@react-navigation/native";
+
 import React from "react";
-import { View, Text, StyleSheet, Image } from "react-native";
-import { TextInput, TouchableOpacity } from "react-native-gesture-handler";
+import { View, Text, StyleSheet, Image,TextInput, TouchableOpacity  } from "react-native";
+
 import ImagePicker from "../imagePicker";
 
 function Welcome({ navigation }) {
