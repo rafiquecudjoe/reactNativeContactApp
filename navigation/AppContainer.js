@@ -5,13 +5,13 @@ import Welcome from "../screens/welcome";
 import Welcome2 from "../screens/welcome2";
 import Login from "../screens/login";
 import SignUp from "../screens/signUp";
-import Profile from "../screens/profile";
 import Home from "../screens/home";
 import ScanQR from "../screens/scanQr";
 import { Text } from "react-native";
 import { Ionicons } from '@expo/vector-icons';
-import Scanner from "../screens/scanner";
 import QRscanner from "../QRscanner";
+import MemberProfile from "../screens/memberProfile";
+import MyProfile from "../screens/myProfile";
 
 const Stack = createStackNavigator();
 function AppContainer({ navigation }) {
@@ -59,7 +59,23 @@ function AppContainer({ navigation }) {
           }} />
         <Stack.Screen name="scanner" component={QRscanner}
         options={{ headerShown: false }}/>
-        <Stack.Screen name="profile" component={Profile}
+        <Stack.Screen name="memberProfile" component={MemberProfile}
+              options={{
+                headerTitle: "Member Profile",
+                headerStatusBarHeight: 50,
+                headerTitleAlign: "center",
+                  headerTitleStyle: { fontSize: 25, color:'white',marginBottom:10},
+              headerStyle:{backgroundColor:'#FF2442',}
+              }}
+        />
+        <Stack.Screen name="myProfile" component={MyProfile}
+              options={{
+                headerTitle: "My Profile",
+                headerStatusBarHeight: 50,
+                headerTitleAlign: "center",
+                  headerTitleStyle: { fontSize: 25, color:'white',marginBottom:10},
+              headerStyle:{backgroundColor:'#FF2442',}
+              }}
         />
         <Stack.Screen name="scanqr" component={ScanQR} />
       </Stack.Navigator>
